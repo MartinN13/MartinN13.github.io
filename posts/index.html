@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="container-fluid">
+  <div class="row center">
+    <div class="col-md-12">
+    <h1>2016</h1>
+    {% for post in site.posts %}
+      {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+      {% if this_year contains '2016' %}
+        <span>{{ post.date | date: "%B %-d, %Y" }} - </span>
+        <a href="{{ post.url }}">
+          <p class="inline">{{ post.title }}</p><br><br>
+        </a>
+      {% endif %}
+    {% endfor %}
+    </div>
+  </div>
+</div>
