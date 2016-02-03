@@ -20,27 +20,6 @@ The code for the banner looked like this:
 </div>
 {% endhighlight %}
 
-and the main index listing of the books looked like this:
-
-{% highlight erb html %}
-<div class="main-content">
-  <h2>Popular by Genre</h2>
-  <% @books.each do |book| %>
-    <div class="col-md-4">
-      <%= link_to image_tag(book.image.url), book, class: 'book-image' %>
-      <h2 class="title"><%= book.title %></h2>
-      <p class="author">by <%= book.author %></p>
-      <p class="description"><%= book.description %></p>
-      <% if user_signed_in? %>
-        <%= link_to 'Show', book %>
-        <%= link_to 'Edit', edit_book_path(book) %>
-        <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %>
-      <% end %>
-    </div>
-  <% end %>
-</div>
-{% endhighlight %}
-
 I started my server and everything was fine. However as I pushed my changes to Heroku
 I suddenly got a (for me quite cryptic) error telling me: `undefined method 'image' for nil:NilClass`.
 
