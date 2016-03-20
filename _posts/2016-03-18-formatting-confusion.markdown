@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Formatting Confusion"
+title:  "Formatting confusion"
 categories: bash
 ---
 I've been finishing up a school project where I'm supposed to convert an excel file
