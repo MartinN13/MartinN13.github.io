@@ -86,6 +86,9 @@ h2 {
 .col-md-6 {
   color: black;
 }
+.col-md-8 {
+  padding-bottom: 40px;
+}
 .container-nav {
   background-color: transparent !important;
   padding-left: 15px;
@@ -147,6 +150,10 @@ h2 {
 .border {
   border-bottom: 1px solid #eee;
   width: 200px;
+}
+.project-img {
+  border: 1px solid #eee;
+  margin-bottom: 10px;
 }
 .post-meta {
   padding-bottom: 80px;
@@ -230,10 +237,11 @@ h2 {
 @media (max-width: 768px) {
   #bs-example-navbar-collapse-1 {
     position: absolute;
+    width: 738px;
   }
   .navbar {
     padding-bottom: 200px !important;
-    background-size: 150%;
+    background-size: cover;
   }
 }
 
@@ -244,6 +252,9 @@ h2 {
 }
 
 @media (min-width: 768px) {
+  .navbar {
+    height: 460px;
+  }
   .navbar-brand {
     padding-left: 0px;
   }
